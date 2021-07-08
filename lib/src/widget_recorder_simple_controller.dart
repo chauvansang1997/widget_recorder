@@ -11,7 +11,7 @@ class WidgetRecorderSimpleController extends WidgetRecorderController {
             scaleFactor: scaleFactor,
             byteFormat: byteFormat);
 
-  Future<WidgetRecorderSnapshot> takeSnapshot() {
-    return this.getSnapshot != null ? this.getSnapshot() : null;
+  Future<WidgetRecorderSnapshot?> takeSnapshot() async {
+    return this.getSnapshot != null ? this.getSnapshot?.call() : null;
   }
 }

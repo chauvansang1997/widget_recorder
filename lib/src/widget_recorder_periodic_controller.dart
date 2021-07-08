@@ -6,9 +6,9 @@ import 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 
 class WidgetRecorderPeriodicController extends WidgetRecorderController {
   final Duration delay;
-  final Function(WidgetRecorderSnapshot) onSnapshotReady;
+  final Function(WidgetRecorderSnapshot)? onSnapshotReady;
 
-  Timer _timer;
+  Timer? _timer;
   bool pause;
 
   WidgetRecorderPeriodicController(
@@ -44,18 +44,16 @@ class WidgetRecorderPeriodicController extends WidgetRecorderController {
   }
 
   void stop() {
-    if (_timer != null) {
-      _timer.cancel();
-      _timer = null;
-    }
+    _timer?.cancel();
+    _timer = null;
   }
 
   void _takeSnapshot(Timer timer) async {
-    if (!pause && this.getSnapshot != null) {
-      WidgetRecorderSnapshot snapshot = await this.getSnapshot();
+    if (!pause) {
+      WidgetRecorderSnapshot? snapshot = await this.getSnapshot?.call();
 
-      if (snapshot != null && this.onSnapshotReady != null) {
-        onSnapshotReady(snapshot);
+      if (this.onSnapshotReady != null && snapshot != null) {
+        onSnapshotReady?.call(snapshot);
       }
     }
   }

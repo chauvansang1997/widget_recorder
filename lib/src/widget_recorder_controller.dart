@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 
-typedef SnapshotCallback = Future<WidgetRecorderSnapshot> Function();
+typedef SnapshotCallback = Future<WidgetRecorderSnapshot?> Function();
 
 abstract class WidgetRecorderController {
   final double pixelRatio;
@@ -11,7 +11,7 @@ abstract class WidgetRecorderController {
   final ImageByteFormat byteFormat;
 
   @protected
-  SnapshotCallback getSnapshot;
+  SnapshotCallback? getSnapshot;
 
   WidgetRecorderController(
       {this.pixelRatio = 1.0,

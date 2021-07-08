@@ -7,10 +7,10 @@ import 'package:flutter/rendering.dart';
 import 'package:widget_recorder/src/widget_recorder_controller.dart';
 import 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 
-export 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 export 'package:widget_recorder/src/widget_recorder_controller.dart';
-export 'package:widget_recorder/src/widget_recorder_simple_controller.dart';
 export 'package:widget_recorder/src/widget_recorder_periodic_controller.dart';
+export 'package:widget_recorder/src/widget_recorder_simple_controller.dart';
+export 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 
 /// A [Widget] that generates an image from a Widget following the provided schedule.
 class WidgetRecorder extends StatefulWidget {
@@ -20,27 +20,23 @@ class WidgetRecorder extends StatefulWidget {
   /// The [WidgetRecorderController] from where to get the snapshots.
   final WidgetRecorderController controller;
 
-  final Function(WidgetRecorderSnapshot) onSnapshotTaken;
+  final Function(WidgetRecorderSnapshot?)? onSnapshotTaken;
 
   WidgetRecorder(
-      {Key key,
-      @required this.child,
-      @required this.controller,
+      {Key? key,
+      required this.child,
+      required this.controller,
       this.onSnapshotTaken})
-      : assert(child != null),
-        assert(controller != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _WidgetRecorderState();
 }
 
 class _WidgetRecorderState extends State<WidgetRecorder> {
-  _WidgetRecorderState();
-
   final GlobalKey _globalKey = GlobalKey();
 
-  RenderObject _renderObject;
+  RenderObject? _renderObject;
 
   @override
   void initState() {
@@ -66,18 +62,20 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
     widget.controller.dispose();
   }
 
-  Future<WidgetRecorderSnapshot> _getSnapshot() async {
-    RenderRepaintBoundary repaintBoundary = _getRepaintBoundary();
-    WidgetRecorderSnapshot snapshot;
+  Future<WidgetRecorderSnapshot?> _getSnapshot() async {
+    RenderRepaintBoundary? repaintBoundary = _getRepaintBoundary();
+    WidgetRecorderSnapshot? snapshot;
 
-    if (this.mounted && !repaintBoundary.debugNeedsPaint) {
+    if (repaintBoundary != null &&
+        this.mounted &&
+        !repaintBoundary.debugNeedsPaint) {
       Size widgetSize = repaintBoundary.size;
       ui.Image image = await repaintBoundary.toImage(
           pixelRatio: widget.controller.pixelRatio);
-      ByteData byteData =
+      ByteData? byteData =
           await image.toByteData(format: widget.controller.byteFormat);
 
-      if (widget.controller.scaleFactor != 1.0) {
+      if (widget.controller.scaleFactor != 1.0 && byteData != null) {
         final ui.Codec markerImageCodec = await ui.instantiateImageCodec(
             byteData.buffer.asUint8List(),
             targetWidth:
@@ -89,12 +87,14 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
             .toByteData(format: widget.controller.byteFormat);
       }
 
-      snapshot = WidgetRecorderSnapshot(
-          widgetSize: widgetSize,
-          pixelRatio: widget.controller.pixelRatio,
-          scaleFactor: widget.controller.scaleFactor,
-          byteFormat: widget.controller.byteFormat,
-          byteData: byteData);
+      if (byteData != null) {
+        snapshot = WidgetRecorderSnapshot(
+            widgetSize: widgetSize,
+            pixelRatio: widget.controller.pixelRatio,
+            scaleFactor: widget.controller.scaleFactor,
+            byteFormat: widget.controller.byteFormat,
+            byteData: byteData);
+      }
     }
 
     widget.onSnapshotTaken?.call(snapshot);
@@ -102,12 +102,12 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
     return snapshot;
   }
 
-  RenderRepaintBoundary _getRepaintBoundary() {
+  RenderRepaintBoundary? _getRepaintBoundary() {
     if (_renderObject == null) {
-      _renderObject = _globalKey.currentContext.findRenderObject();
+      _renderObject = _globalKey.currentContext?.findRenderObject();
     }
 
-    return _renderObject;
+    return _renderObject as RenderRepaintBoundary;
   }
 
   @override
