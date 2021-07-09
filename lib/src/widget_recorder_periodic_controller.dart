@@ -27,7 +27,7 @@ class WidgetRecorderPeriodicController extends WidgetRecorderController {
   void setCallback(SnapshotCallback callback) {
     super.setCallback(callback);
     //
-    start();
+    // start();
   }
 
   @override
