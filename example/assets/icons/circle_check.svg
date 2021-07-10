@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <rect class="a" width="24" height="24" fill="none"/>
+    <g transform="translate(-478 -1739.73)">
+        <g transform="translate(480 1741.731)">
+            <circle class="b" cx="10" cy="10" r="10" transform="translate(0 0)" fill="#2c333a"/>
+            <g transform="translate(5.322 6.543)">
+                <path class="c" d="M3.393,7.949,0,4.523,1.113,3.4,3.394,5.7,9.046,0l1.112,1.122Z"
+                      transform="translate(0 -0.004)" fill="#fff"/>
+            </g>
+        </g>
+    </g>
+</svg>

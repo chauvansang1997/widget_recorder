@@ -1,0 +1,82 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 160 169.13699">
+<!--    <defs>-->
+<!--        <style>-->
+<!--            .cls-1{fill:none;}.cls-2{fill:#f8f9fb;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:#e4e5e8;}.cls-5{fill:#f3f3f3;}.cls-6{fill:#c6cacf;}.cls-7{fill:#d5d9df;}-->
+<!--        </style>-->
+
+<!--    </defs>-->
+    <title>Empty-Shop</title>
+    <clipPath id="clip-path">
+        <circle class="cls-1" cx="80" cy="80" r="80" fill="none"/>
+    </clipPath>
+    <g id="Group_9421" data-name="Group 9421">
+        <circle id="Ellipse_781" data-name="Ellipse 781" class="cls-2" cx="80" cy="80" r="80" fill="#f8f9fb"/>
+        <g class="cls-3">
+            <g id="Mask_Group_33" data-name="Mask Group 33">
+                <g id="Group_9425" data-name="Group 9425">
+                    <rect id="Rectangle_2482" data-name="Rectangle 2482" class="cls-4" x="19.62708" y="163.40499"
+                          width="120.747" height="5.732"/>
+                    <rect id="Rectangle_2484" data-name="Rectangle 2484" class="cls-5" x="25.65308" y="44.88899"
+                          width="108.697" height="113.247"/>
+                    <rect id="Rectangle_2485" data-name="Rectangle 2485" class="cls-4" x="29.68201" y="102.78799"
+                          width="31.485" height="55.35"/>
+                    <rect id="Rectangle_2487" data-name="Rectangle 2487" class="cls-4" x="66.13" y="102.78699"
+                          width="64.233" height="44.065"/>
+                    <rect id="Rectangle_2488" data-name="Rectangle 2488" class="cls-5" x="32.44604" y="105.128"
+                          width="25.958" height="41.523"/>
+                    <rect id="Rectangle_2489" data-name="Rectangle 2489" class="cls-5" x="68.19897" y="105.55499"
+                          width="60.097" height="33.9"/>
+                    <rect id="Rectangle_2490" data-name="Rectangle 2490" class="cls-5" x="24.41907" y="157.53999"
+                          width="111.164" height="5.865"/>
+                    <rect id="Rectangle_2491" data-name="Rectangle 2491" class="cls-5" x="33.13098" y="157.53999"
+                          width="25.304" height="5.865"/>
+                    <rect id="Rectangle_2492" data-name="Rectangle 2492" class="cls-4" x="31.40698" y="163.40499"
+                          width="28.754" height="5.732"/>
+                    <g id="Group_9424" data-name="Group 9424">
+                        <path id="Path_3753" data-name="Path 3753" class="cls-6"
+                              d="M15.30505,85.244v10.14a14.7,14.7,0,0,0,14.377,0h0V85.244Z"/>
+                        <path id="Path_3754" data-name="Path 3754" class="cls-6"
+                              d="M58.436,85.244v10.14l-.16895.092a14.352,14.352,0,0,1-14.04,0l-.16894-.092V85.244"/>
+                        <path id="Path_3755" data-name="Path 3755" class="cls-6"
+                              d="M87.189,85.244v10.14h0a14.7,14.7,0,0,1-14.37695,0h0V85.244"/>
+                        <path id="Path_3756" data-name="Path 3756" class="cls-6"
+                              d="M115.94312,85.244v10.14h0a14.7,14.7,0,0,1-14.377,0h0V85.244"/>
+                        <path id="Path_3757" data-name="Path 3757" class="cls-6"
+                              d="M144.69708,85.244v10.14h0a14.7,14.7,0,0,1-14.377,0h0V85.244"/>
+                        <path id="Path_3758" data-name="Path 3758" class="cls-4"
+                              d="M44.05811,85.244v10.14h0a14.694,14.694,0,0,1-14.376,0h0V85.244"/>
+                        <path id="Path_3759" data-name="Path 3759" class="cls-4"
+                              d="M72.81311,85.244v10.14h0a13.976,13.976,0,0,1-13.694.353l-.682-.353V85.244"/>
+                        <path id="Path_3760" data-name="Path 3760" class="cls-4"
+                              d="M101.566,85.244v10.14h0a14.7,14.7,0,0,1-14.377,0h0V85.244"/>
+                        <path id="Path_3761" data-name="Path 3761" class="cls-4"
+                              d="M130.32007,85.244v10.14h0a14.7,14.7,0,0,1-14.37695,0h0V85.244"/>
+                        <path id="Path_3762" data-name="Path 3762" class="cls-7"
+                              d="M15.306,85.244,25.65308,66.139h12.077l-8.048,19.105"/>
+                        <path id="Path_3763" data-name="Path 3763" class="cls-7"
+                              d="M130.32,85.244l-8.048-19.105h12.077l10.347,19.105"/>
+                        <path id="Path_3764" data-name="Path 3764" class="cls-5"
+                              d="M29.681,85.244l8.048-19.105H49.806L44.057,85.244"/>
+                        <path id="Path_3765" data-name="Path 3765" class="cls-7"
+                              d="M44.05908,85.244l5.749-19.105h12.077l-3.449,19.105"/>
+                        <path id="Path_3766" data-name="Path 3766" class="cls-5"
+                              d="M58.43616,85.244l3.449-19.105h12.077l-1.15,19.105"/>
+                        <path id="Path_3767" data-name="Path 3767" class="cls-7"
+                              d="M72.812,85.244l1.15-19.105h12.077l1.15,19.105"/>
+                        <path id="Path_3768" data-name="Path 3768" class="cls-5"
+                              d="M87.18909,85.244l-1.15-19.105h12.077l3.449,19.105"/>
+                        <path id="Path_3769" data-name="Path 3769" class="cls-7"
+                              d="M101.56714,85.244l-3.449-19.105h12.077l5.749,19.105"/>
+                        <path id="Path_3770" data-name="Path 3770" class="cls-5"
+                              d="M115.943,85.244l-5.749-19.105h12.077l8.048,19.105"/>
+                    </g>
+                    <rect id="Rectangle_2497" data-name="Rectangle 2497" class="cls-6" x="25.65308" y="60.993"
+                          width="108.697" height="5.145"/>
+                    <rect id="Rectangle_2498" data-name="Rectangle 2498" class="cls-6" x="25.65308" y="39.74399"
+                          width="108.697" height="5.145"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg id="Icon_24_Message" data-name="Icon/24/Message" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+    <g id="Icon_ionic-md-chatboxes" data-name="Icon ionic-md-chatboxes" transform="translate(-1.375 -1.5)">
+        <path id="Path_3640" data-name="Path 3640"
+              d="M19.905,4.5H3.837a.463.463,0,0,0-.462.393V15.2a.483.483,0,0,0,.462.415H6.6v4.277l4.337-4.277h8.97a.388.388,0,0,0,.358-.415V4.893A.368.368,0,0,0,19.905,4.5Z"
+              transform="translate(0)" fill="#2c333a"/>
+        <path id="Path_3641" data-name="Path 3641"
+              d="M25.937,8.93H24.379v8.015c0,.769-.333,1.272-1.21,1.272h-8.7L12.6,20.093h6.24l4.336,4.282V20.093h2.762a.4.4,0,0,0,.366-.418V9.368A.416.416,0,0,0,25.937,8.93Z"
+              transform="translate(-2.912 -1.398)" fill="#2c333a"/>
+    </g>
+    <rect id="Rectangle_2404" data-name="Rectangle 2404" width="24" height="24" fill="none"/>
+</svg>

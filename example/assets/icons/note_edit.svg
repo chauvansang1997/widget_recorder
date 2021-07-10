@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34">
+<!--    <defs>-->
+<!--        <style>-->
+<!--            .a,.b,.c,.d{fill:none;}.a,.b,.c{stroke:#fff;stroke-width:1.25px;}.a,.b{stroke-miterlimit:10;}.b,.c{stroke-linecap:round;}.c{stroke-linejoin:round;}-->
+<!--        </style>-->
+<!--    </defs>-->
+    <g transform="translate(-51 -776)">
+        <g transform="translate(1192.66 230.729)">
+            <g transform="translate(-1137.66 549.272)">
+                <path class="a" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10"
+                    d="M-1117.51,567.175v8.209a.808.808,0,0,1-.783.832h-18.583a.808.808,0,0,1-.783-.832V550.1a.808.808,0,0,1,.783-.832h13.558a.99.99,0,0,1,.675.269l4.752,4.4a1.214,1.214,0,0,1,.381.89V557.2"
+                    transform="translate(1137.66 -549.272)" />
+                <path class="a" d="M-1113.311,554.826h-4.475a.9.9,0,0,1-.9-.9v-3.991" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10"
+                    transform="translate(1133.461 -549.418)" />
+                <line class="b" x2="7.225" transform="translate(3.656 3.459)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10" stroke-linecap="round"/>
+                <line class="b" x2="7.225" transform="translate(3.656 7.186)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10" stroke-linecap="round"/>
+                <line class="b" x2="11.77" transform="translate(3.656 11.109)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10" stroke-linecap="round"/>
+                <line class="b" x2="9.122" transform="translate(3.656 14.771)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(-1123.673 551.627)">
+                <path class="c" fill="none" stroke="#fff" stroke-width="1.25px"
+                    d="M-1116.185,570.377l-2.855.533-.607-2.841a2.288,2.288,0,0,1,.334-1.748l8.523-12.79a2.773,2.773,0,0,1,3.844-.769h0a2.773,2.773,0,0,1,.769,3.844L-1114.7,569.4A2.289,2.289,0,0,1-1116.185,570.377Z"
+                    transform="translate(1119.698 -552.296)" />
+                <path class="a" d="M-1116.934,573.31" transform="translate(1119.086 -556.947)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10"/>
+                <path class="a" d="M-1116.934,573.31" transform="translate(1119.086 -556.947)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10"/>
+                <line class="c" x2="4.613" y2="3.075" transform="translate(0.384 14.024)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-linecap="round" stroke-linejoin="round"/>
+                <line class="c" x2="4.613" y2="3.075" transform="translate(7.633 3.149)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <path class="a" d="M-1102.462,578.15" transform="translate(-7.79 -6.391)" fill="none" stroke="#fff" stroke-width="1.25px" stroke-miterlimit="10"/>
+        </g>
+        <rect class="d" width="35" height="34" transform="translate(51 776)" fill="none"/>
+    </g>
+</svg>

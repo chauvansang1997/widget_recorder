@@ -70,6 +70,7 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
         this.mounted &&
         !repaintBoundary.debugNeedsPaint) {
       Size widgetSize = repaintBoundary.size;
+      print(widgetSize.width);
       ui.Image image = await repaintBoundary.toImage(
           pixelRatio: widget.controller.pixelRatio);
       ByteData? byteData =
@@ -94,10 +95,12 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
             scaleFactor: widget.controller.scaleFactor,
             byteFormat: widget.controller.byteFormat,
             byteData: byteData);
+
+        widget.onSnapshotTaken?.call(snapshot);
       }
     }
 
-    widget.onSnapshotTaken?.call(snapshot);
+
 
     return snapshot;
   }

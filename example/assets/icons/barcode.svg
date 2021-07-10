@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.476" height="24" viewBox="0 0 24.476 24">
+    <rect class="a" width="24" height="24" fill="none"/>
+    <g transform="translate(0.523 -45.781)">
+        <g transform="translate(0 48)">
+            <path fill="#2c333a" class="b" d="M3.992,48H.8a.8.8,0,0,0-.8.8v3.194a.8.8,0,1,0,1.6,0V49.6h2.4a.8.8,0,1,0,0-1.6Z"
+                  transform="translate(0 -48)"/>
+        </g>
+        <g transform="translate(19.162 62.372)">
+            <path class="b" fill="#2c333a"
+                  d="M387.992,336a.8.8,0,0,0-.8.8v2.4h-2.4a.8.8,0,1,0,0,1.6h3.194a.8.8,0,0,0,.8-.8V336.8A.8.8,0,0,0,387.992,336Z"
+                  transform="translate(-384 -336)"/>
+        </g>
+        <g transform="translate(19.162 48)">
+            <path class="b" d="M387.992,48H384.8a.8.8,0,0,0,0,1.6h2.4v2.4a.8.8,0,1,0,1.6,0V48.8A.8.8,0,0,0,387.992,48Z"
+                  transform="translate(-384 -48)" fill="#2c333a"/>
+        </g>
+        <g transform="translate(0 62.372)">
+            <path class="b" d="M3.992,339.194H1.6v-2.4a.8.8,0,0,0-1.6,0v3.194a.8.8,0,0,0,.8.8H3.992a.8.8,0,1,0,0-1.6Z"
+                  transform="translate(0 -336)" fill="#2c333a"/>
+        </g>
+        <g transform="translate(3.451 51.248)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="13.074" transform="translate(0.025 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(6.699 51.248)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="10" transform="translate(-0.223 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(9.946 51.248)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="10" transform="translate(-0.47 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(13.195 51.248)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="13.074" transform="translate(0.281 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(16.442 51.248)">
+            <g transform="translate(0 0)">
+                <rect  fill="#2c333a" class="b" width="1.25" height="10" transform="translate(0.034 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(19.69 51.248)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="13.074" transform="translate(-0.214 -0.173)"/>
+            </g>
+        </g>
+        <g transform="translate(6.699 62.615)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="1" transform="translate(-0.223 0.533)"/>
+            </g>
+        </g>
+        <g transform="translate(9.946 62.615)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="1" transform="translate(-0.47 0.533)"/>
+            </g>
+        </g>
+        <g transform="translate(16.442 62.615)">
+            <g transform="translate(0 0)">
+                <rect fill="#2c333a" class="b" width="1.25" height="1" transform="translate(0.034 0.533)"/>
+            </g>
+        </g>
+    </g>
+</svg>

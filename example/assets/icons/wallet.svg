@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+<!--    <defs>-->
+<!--        <style>-->
+<!--            .a,.c{fill:none;}.a{stroke:#949da9;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.25px;}.b{fill:#929daa;}-->
+<!--        </style>-->
+<!--    </defs>-->
+    <g transform="translate(-55 -923)">
+        <g transform="translate(1139.194 325.889)">
+            <path class="a" fill="none" stroke="#949da9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25px"
+                d="M-1055.979,622.033v5.093a1.323,1.323,0,0,1-1.182,1.429h-21.851a1.323,1.323,0,0,1-1.182-1.429V611.519a1.323,1.323,0,0,1,1.182-1.428h21.851a1.323,1.323,0,0,1,1.182,1.428v5.324"
+                transform="translate(0 -0.959)" />
+            <path class="a" fill="none" stroke="#949da9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25px"
+                d="M2.463,0H7.205a0,0,0,0,1,0,0V4.959a0,0,0,0,1,0,0H2.463A2.463,2.463,0,0,1,0,2.5V2.463A2.463,2.463,0,0,1,2.463,0Z"
+                transform="translate(-1062.241 615.884)" />
+            <g transform="translate(-1077.739 601.111)">
+                <path class="a" d="M-1077.445,609.131l16.413-8.02,3.9,7.972" fill="none" stroke="#949da9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25px"
+                    transform="translate(1077.445 -601.111)" />
+                <path class="a" d="M-1073.139,609.588l8.609-4.207s.79,3.793,4.745,1.611l1.268,2.6" fill="none" stroke="#949da9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25px"
+                    transform="translate(1076.985 -601.567)" />
+            </g>
+            <circle class="b" cx="1.124" cy="1.124" r="1.124" fill="#929daa"
+                transform="translate(-1059.679 617.258)" />
+        </g>
+        <rect class="c" width="34" height="34" transform="translate(55 923)" fill="none" />
+    </g>
+</svg>

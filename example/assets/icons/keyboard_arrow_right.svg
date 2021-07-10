@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g transform="translate(0 16) rotate(-90)">
+        <rect class="a" width="16" height="16" fill="none" />
+        <g transform="translate(3 6)">
+            <path class="b" d="M4.8,5.687,0,.884.884,0,4.8,3.919,8.721,0l.885.884Z"
+                fill="#ff6720" />
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 160 182.41">
+    <defs>
+        <style>
+            .cls-1{fill:none;}.cls-2{fill:#f8f9fb;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:#d5d9df;}.cls-5{fill:#e4e5e8;}.cls-6{fill:#f3f3f3;}.cls-7{fill:#eaebec;}
+        </style>
+
+    </defs>
+    <title>Empty-Order</title>
+    <clipPath id="clip-path">
+        <circle class="cls-1" cx="80" cy="80" r="80"/>
+    </clipPath>
+    <g id="Group_9420" data-name="Group 9420">
+        <circle id="Ellipse_781" data-name="Ellipse 781" class="cls-2" cx="80" cy="80" r="80"/>
+        <g class="cls-3">
+            <g id="Mask_Group_33" data-name="Mask Group 33">
+                <g id="Group_9418" data-name="Group 9418">
+                    <path id="Path_3745" data-name="Path 3745" class="cls-4"
+                          d="M117.003,122.462H85.173V82.674L133.98,99.65Z"/>
+                    <path id="Path_3746" data-name="Path 3746" class="cls-5"
+                          d="M53.342,122.462h31.83V82.674L25.756,100.181Z"/>
+                    <path id="Path_3747" data-name="Path 3747" class="cls-6"
+                          d="M133.979,165.169,74.297,182.41V116.892l59.682-17.241Z"/>
+                    <path id="Path_3748" data-name="Path 3748" class="cls-6"
+                          d="M85.173,82.674,25.756,100.181,8.78,71.003,68.197,55.088Z"/>
+                    <path id="Path_3749" data-name="Path 3749" class="cls-6"
+                          d="M133.98,99.65,85.173,82.674l16.976-23.342L150.69,76.043Z"/>
+                    <path id="Path_3750" data-name="Path 3750" class="cls-7"
+                          d="M133.979,99.65,74.297,116.887l21.22-19.894L155.197,80.287Z"/>
+                    <path id="Path_3751" data-name="Path 3751" class="cls-7"
+                          d="M25.756,100.181l48.541,16.711-21.22-19.894L4.801,80.818Z"/>
+                    <path id="Path_3752" data-name="Path 3752" class="cls-5"
+                          d="M74.297,182.409l-48.541-16.71V100.181l48.541,16.711Z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
