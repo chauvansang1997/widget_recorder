@@ -19,7 +19,7 @@ class WidgetRecorderPeriodicController extends WidgetRecorderController {
       {double pixelRatio = 1.0,
       double scaleFactor = 1.0,
       ImageByteFormat byteFormat = ImageByteFormat.png,
-      this.delay = const Duration(seconds: 1),
+      this.delay = const Duration(milliseconds: 50),
       this.pause = false,
       this.onSnapshotReady})
       : super(

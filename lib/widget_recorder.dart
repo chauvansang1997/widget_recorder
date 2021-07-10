@@ -66,11 +66,8 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
     RenderRepaintBoundary? repaintBoundary = _getRepaintBoundary();
     WidgetRecorderSnapshot? snapshot;
 
-    if (repaintBoundary != null &&
-        this.mounted &&
-        !repaintBoundary.debugNeedsPaint) {
+    if (repaintBoundary != null && this.mounted) {
       Size widgetSize = repaintBoundary.size;
-      print(widgetSize.width);
       ui.Image image = await repaintBoundary.toImage(
           pixelRatio: widget.controller.pixelRatio);
       ByteData? byteData =

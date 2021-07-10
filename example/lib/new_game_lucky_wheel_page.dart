@@ -61,9 +61,9 @@ class _NewGameLuckyWheelPageState extends State<NewGameLuckyWheelPage> {
   @override
   void initState() {
     _recordController = WidgetRecorderPeriodicController(
-      delay: Duration(milliseconds: 10),
-      pixelRatio: 0.5,
-      scaleFactor: 0.5
+      delay: Duration(milliseconds: 20),
+      pixelRatio: 1,
+      scaleFactor: 1
     );
     _recordController.addListener(notifyNewFrameReady);
     _gameLuckyWheelBloc = GameLuckyWheelBloc();
