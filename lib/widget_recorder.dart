@@ -14,6 +14,14 @@ export 'package:widget_recorder/src/widget_recorder_snapshot.dart';
 
 /// A [Widget] that generates an image from a Widget following the provided schedule.
 class WidgetRecorder extends StatefulWidget {
+  WidgetRecorder({
+    Key? key,
+    required this.child,
+    required this.controller,
+    this.onSnapshotTaken,
+    this.globalKey,
+  }) : super(key: key);
+
   /// The [Widget] from where to get image.
   final Widget child;
 
@@ -21,34 +29,31 @@ class WidgetRecorder extends StatefulWidget {
   final WidgetRecorderController controller;
 
   final Function(WidgetRecorderSnapshot?)? onSnapshotTaken;
-
-  WidgetRecorder(
-      {Key? key,
-      required this.child,
-      required this.controller,
-      this.onSnapshotTaken})
-      : super(key: key);
+  final GlobalKey? globalKey;
 
   @override
   State<StatefulWidget> createState() => _WidgetRecorderState();
 }
 
 class _WidgetRecorderState extends State<WidgetRecorder> {
-  final GlobalKey _globalKey = GlobalKey();
+  late GlobalKey _globalKey;
 
   RenderObject? _renderObject;
 
   @override
   void initState() {
     super.initState();
-    //
+    if (widget.globalKey != null) {
+      _globalKey = widget.globalKey!;
+    } else {
+      _globalKey = GlobalKey();
+    }
     widget.controller.setCallback(_getSnapshot);
   }
 
   @override
   void didUpdateWidget(WidgetRecorder oldWidget) {
     super.didUpdateWidget(oldWidget);
-    //
     if (oldWidget.controller != widget.controller) {
       oldWidget.controller.dispose();
       widget.controller.setCallback(_getSnapshot);
@@ -58,56 +63,63 @@ class _WidgetRecorderState extends State<WidgetRecorder> {
   @override
   void dispose() {
     super.dispose();
-    //
     widget.controller.dispose();
   }
 
   Future<WidgetRecorderSnapshot?> _getSnapshot() async {
-    RenderRepaintBoundary? repaintBoundary = _getRepaintBoundary();
+    RenderObject? renderObject = _getRepaintBoundary();
     WidgetRecorderSnapshot? snapshot;
 
-    if (repaintBoundary != null && this.mounted) {
-      Size widgetSize = repaintBoundary.size;
-      ui.Image image = await repaintBoundary.toImage(
-          pixelRatio: widget.controller.pixelRatio);
-      ByteData? byteData =
-          await image.toByteData(format: widget.controller.byteFormat);
+    if (renderObject != null) {
+      ByteData? byteData;
+      try {
+        RenderRepaintBoundary repaintBoundary =
+            renderObject as RenderRepaintBoundary;
+        Size widgetSize = repaintBoundary.size;
+        // repaintBoundary.layer;
 
-      if (widget.controller.scaleFactor != 1.0 && byteData != null) {
-        final ui.Codec markerImageCodec = await ui.instantiateImageCodec(
-            byteData.buffer.asUint8List(),
-            targetWidth:
-                (widgetSize.width * widget.controller.scaleFactor).toInt(),
-            targetHeight:
-                (widgetSize.height * widget.controller.scaleFactor).toInt());
-        final ui.FrameInfo frameInfo = await markerImageCodec.getNextFrame();
-        byteData = await frameInfo.image
-            .toByteData(format: widget.controller.byteFormat);
-      }
+        final OffsetLayer offsetLayer = repaintBoundary.layer! as OffsetLayer;
+        ui.Image image = await offsetLayer.toImage(
+            Offset.zero & repaintBoundary.size,
+            pixelRatio: widget.controller.pixelRatio);
 
-      if (byteData != null) {
-        snapshot = WidgetRecorderSnapshot(
-            widgetSize: widgetSize,
-            pixelRatio: widget.controller.pixelRatio,
-            scaleFactor: widget.controller.scaleFactor,
-            byteFormat: widget.controller.byteFormat,
-            byteData: byteData);
+        // ui.Image image = await repaintBoundary.toImage(
+        //     pixelRatio: widget.controller.pixelRatio);
+        byteData = await image.toByteData(format: widget.controller.byteFormat);
 
-        widget.onSnapshotTaken?.call(snapshot);
-      }
+        if (widget.controller.scaleFactor != 1.0 && byteData != null) {
+          // _base64 = await compute(encodeImage, _image);
+          final ui.Codec markerImageCodec = await ui.instantiateImageCodec(
+              byteData.buffer.asUint8List(),
+              targetWidth:
+                  (widgetSize.width * widget.controller.scaleFactor).toInt(),
+              targetHeight:
+                  (widgetSize.height * widget.controller.scaleFactor).toInt());
+          final ui.FrameInfo frameInfo = await markerImageCodec.getNextFrame();
+          byteData = await frameInfo.image
+              .toByteData(format: widget.controller.byteFormat);
+        }
+
+        if (byteData != null) {
+          snapshot = WidgetRecorderSnapshot(
+              widgetSize: widgetSize,
+              pixelRatio: widget.controller.pixelRatio,
+              scaleFactor: widget.controller.scaleFactor,
+              byteFormat: widget.controller.byteFormat,
+              byteData: byteData);
+
+          widget.onSnapshotTaken?.call(snapshot);
+        }
+      } catch (e, stack) {}
     }
-
-
 
     return snapshot;
   }
 
-  RenderRepaintBoundary? _getRepaintBoundary() {
-    if (_renderObject == null) {
-      _renderObject = _globalKey.currentContext?.findRenderObject();
-    }
+  RenderObject? _getRepaintBoundary() {
+    _renderObject = _globalKey.currentContext?.findRenderObject();
 
-    return _renderObject as RenderRepaintBoundary;
+    return _renderObject;
   }
 
   @override

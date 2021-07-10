@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
@@ -51,9 +52,7 @@ class _NewGameLuckyWheelPageState extends State<NewGameLuckyWheelPage> {
   Uint8List? _imageBytes;
 
   void notifyNewFrameReady() {
-    WidgetsBinding.instance
-        ?.addPostFrameCallback((_) {
-      print('new');
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
       _recordController.newFrameReady();
     });
   }
@@ -61,10 +60,7 @@ class _NewGameLuckyWheelPageState extends State<NewGameLuckyWheelPage> {
   @override
   void initState() {
     _recordController = WidgetRecorderPeriodicController(
-      delay: Duration(milliseconds: 20),
-      pixelRatio: 1,
-      scaleFactor: 1
-    );
+        delay: Duration(milliseconds: 100), pixelRatio: 0.1, scaleFactor: 1);
     _recordController.addListener(notifyNewFrameReady);
     _gameLuckyWheelBloc = GameLuckyWheelBloc();
     _gameLuckyWheelBloc.add(GameLuckyWheelLoaded());
@@ -94,6 +90,9 @@ class _NewGameLuckyWheelPageState extends State<NewGameLuckyWheelPage> {
   List colors = [Colors.red, Colors.green, Colors.yellow];
   Random random = new Random();
   int index = 0;
+  final GlobalKey _globalKey = GlobalKey();
+  int lastSize = 0;
+  Completer? _completer;
 
   @override
   Widget build(BuildContext context) {
@@ -108,18 +107,31 @@ class _NewGameLuckyWheelPageState extends State<NewGameLuckyWheelPage> {
               //     (_) => _painterController.playLoopAnimation());
             },
             child: WidgetRecorder(
+              globalKey: _globalKey,
               controller: _recordController,
-              onSnapshotTaken: (WidgetRecorderSnapshot? snapshot) {
+              onSnapshotTaken: (WidgetRecorderSnapshot? snapshot) async {
                 if (snapshot != null) {
                   index = random.nextInt(3);
                   print(snapshot);
-
+                  // if(_completer != null){
+                  //   await _completer?.future;
+                  // }
+                  // _completer = Completer();
                   Uint8List bytes = snapshot.byteData.buffer.asUint8List();
-                  print(bytes.length);
+                  if (lastSize != bytes.length) {
+                    lastSize = bytes.length;
+                    setState(() {
+                      _imageBytes = bytes;
+                    });
+                    // Future.delayed(const Duration(milliseconds: 1000), (){
+                    //   // _completer?.complete();
+                    //
+                    // });
+                  }
+
+                  // print(bytes.length);
                   // _gameLuckyWheelBloc.add(GameLuckyWheelSnapshotCame(bytes));
-                  setState(() {
-                    _imageBytes = bytes;
-                  });
+
                 }
               },
               child: Transform(
