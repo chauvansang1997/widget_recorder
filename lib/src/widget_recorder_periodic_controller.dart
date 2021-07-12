@@ -64,9 +64,9 @@ class WidgetRecorderPeriodicController extends WidgetRecorderController {
 
   void _takeSnapshot(Timer timer) async {
     if (!pause) {
-      // requestFrame();
-      // _newFrameAvailable = Completer();
-      // await _newFrameAvailable.future;
+      requestFrame();
+      _newFrameAvailable = Completer();
+      await _newFrameAvailable.future;
       WidgetRecorderSnapshot? snapshot = await this.getSnapshot?.call();
       if (this.onSnapshotReady != null && snapshot != null) {
         onSnapshotReady?.call(snapshot);
